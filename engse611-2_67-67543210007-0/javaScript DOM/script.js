@@ -33,7 +33,7 @@ function deleteTodo(id) {
 }
 
 function renderTodo() {
-  //console.log("renderTodo.");
+  
   todoList.innerHTML = "";
 
   todos.forEach((todo) => {
@@ -46,9 +46,9 @@ function renderTodo() {
 
     deleteButton.addEventListener("click", () => deleteTodo(todo.id));
 
-    todoItem.appendChild(todoText); //appendChild   li <- span
-    todoText.appendChild(deleteButton); //appendChild  li <- button
-    todoList.appendChild(todoItem); //appendChild  ul <- li
+    todoItem.appendChild(todoText); 
+    todoText.appendChild(deleteButton); 
+    todoList.appendChild(todoItem); 
 
   });
 
@@ -60,24 +60,3 @@ form.addEventListener("submit", (event) => {
 });
 
 renderTodo();
-
-
-    /* //id=2;
-        todos = [
-                    {   
-                        id: 1,
-                        name: "task1"
-                    },
-                    {
-                        id: 2,
-                        name: "task2"
-                    },
-                    {
-                        id: 3,
-                        name: "task3"
-                    },
-                ]
-
-
-
-    */
